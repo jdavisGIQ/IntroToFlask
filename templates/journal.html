@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Journal Page</title>
+{% endblock %}
+
+
+{% block body %}
+<form action="http://localhost:5000/journalentry" method="POST">
+    <p>Date <input type="text" name="date" /> </p>
+    <p>Name <input type="text" name="name" /> </p>
+    <p>Journal Entry <input type="text" name="journalEntry" /> </p>
+    <p><input type="submit" name="submit" /> </p>
+</form>
+
+{% endblock %}

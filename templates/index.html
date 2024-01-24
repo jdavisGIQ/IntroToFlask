@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script type="text/javascript" src="{{ url_for('static', filename='hello.js') }}"></script>
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="text-center bg-primary text-white p-5">
+    <h1>Welcome to my app, my name is {{ username }}</h1>
+    </div>
+    <div class="container text-center list-inline position-inside p-2" style="list-style-position: inside">
+    <ul>
+        {% for project in projectList %}
+        <li> {{ project }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    <div class="container text-center p-2"> 
+    <input type="button" value="Login Page" onclick="window.location.href='{{ url_for ('login') }}'"method="GET" />
+    </div>
+    <div class="container text-center p-2">
+        <input type="button" value="Secret" onclick="showMessage()"/>
+    </div>
+    <div class="container text-center p-2">
+        <a href="journal" >New Journal Entry</a>
+    </div>
+{% endblock %}

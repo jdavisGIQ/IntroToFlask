@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Journal Page</title>
+{% endblock %}
+
+
+{% block body %}
+<table border="1">
+    {% for key, value in entry.items()%}
+    <tr>
+        <th> {{ key }} </th>
+        <td> {{ value }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
